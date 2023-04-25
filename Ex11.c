@@ -5,7 +5,7 @@
 
 #define TAMANHO 100000000
 
-float raiz_quadrada (double numero)
+double raiz_quadrada (double numero)
 {
     int i;
     double recorre = numero;
