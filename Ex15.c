@@ -15,7 +15,7 @@ int *CriarVetor(int n) {
   return vetor;
 }
 
-int main(){
+int main() {
     MPI_Init(NULL, NULL);
 
     int nprocs;
@@ -29,7 +29,7 @@ int main(){
     subVetor = malloc(sizeof(int)*qtd);
     vetorZero = malloc(sizeof(int)*nprocs);
     vetorUm = malloc(sizeof(int)*nprocs);
-    if(rank == 0){
+    if (rank == 0) {
         vetorPrincp = CriarVetor(TAM);
     }
     MPI_Scatter(vetorPrincp, qtd, MPI_INT, subVetor, qtd, MPI_INT, 0, MPI_COMM_WORLD);
